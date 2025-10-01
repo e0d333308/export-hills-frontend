@@ -1,0 +1,109 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Theme Colors ---------- */
+/* your custom styles below */
+
+
+/* ---------- Theme Colors ---------- */
+:root {
+  --brand-primary: #b5713f;   /* warm brown */
+  --brand-dark: #6b3f2a;
+  --brand-muted: #1f2937;     /* gray-800 */
+}
+
+/* ---------- Base Reset ---------- */
+body {
+  @apply font-sans text-gray-800 bg-white antialiased;
+}
+
+h1, h2, h3, h4 {
+  @apply font-bold text-gray-900;
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  @apply relative w-full bg-center bg-cover;
+}
+.hero::after {
+  content: "";
+  @apply absolute inset-0 bg-black/40;
+}
+.hero-inner {
+  @apply relative z-10 max-w-6xl mx-auto px-6 sm:px-10 lg:px-16 py-24 sm:py-32 text-center;
+}
+.hero-title {
+  @apply text-white font-extrabold text-4xl sm:text-6xl lg:text-7xl leading-tight;
+}
+.hero-sub {
+  @apply text-gray-100 mt-4 max-w-3xl mx-auto text-base sm:text-lg;
+}
+.hero-btn {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold shadow-md transition;
+}
+.hero-btn-primary {
+  @apply hero-btn text-white bg-[var(--brand-primary)] hover:bg-[var(--brand-dark)];
+}
+.hero-btn-outline {
+  @apply hero-btn border border-white/20 text-white hover:bg-white/10;
+}
+
+/* ---------- Section Titles ---------- */
+.section-title {
+  @apply text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-10 relative;
+}
+.section-title::after {
+  content: "";
+  @apply absolute left-1/2 -translate-x-1/2 bottom-[-20px] w-20 h-1 rounded-full;
+  background: linear-gradient(90deg, var(--brand-primary), var(--brand-dark));
+}
+
+/* ---------- Cards ---------- */
+.card {
+  @apply bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden transition-transform;
+}
+.card:hover {
+  @apply -translate-y-2 shadow-lg;
+}
+.card img {
+  @apply w-full h-48 object-cover;
+}
+.card-body {
+  @apply p-6 text-center;
+}
+.card-title {
+  @apply font-semibold text-lg mb-2 text-gray-900;
+}
+.card-text {
+  @apply text-sm text-gray-600;
+}
+
+/* ---------- Services Grid ---------- */
+.services-grid {
+  @apply grid gap-8 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+/* ---------- Contact Form ---------- */
+.contact-panel {
+  @apply bg-gray-100 p-8 lg:p-12 rounded-lg;
+}
+.contact-input {
+  @apply w-full border border-gray-300 rounded-md p-3 text-sm focus:ring-2 focus:ring-[var(--brand-primary)] outline-none;
+}
+.contact-btn {
+  @apply w-full bg-[#d28c47] text-white font-semibold py-3 rounded-md 
+         hover:bg-[#b87436] transition;
+}
+
+
+/* ---------- Utilities ---------- */
+.scroll-top {
+  @apply fixed bottom-8 right-6 w-12 h-12 flex items-center justify-center rounded-md shadow-lg cursor-pointer bg-[var(--brand-primary)] text-white transition;
+}
+.scroll-top:hover {
+  @apply -translate-y-1;
+}
